@@ -15,6 +15,7 @@
 		40E38CC729BF0CBD0015B019 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E38CC629BF0CBD0015B019 /* ContentView.swift */; };
 		40E38CC929BF0CBE0015B019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E38CC829BF0CBE0015B019 /* Assets.xcassets */; };
 		40E38CCC29BF0CBE0015B019 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E38CCB29BF0CBE0015B019 /* Preview Assets.xcassets */; };
+		40EA109029C05A7100D7443B /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EA108F29C05A7100D7443B /* PhotoPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		40E38CC629BF0CBD0015B019 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40E38CC829BF0CBE0015B019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E38CCB29BF0CBE0015B019 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40EA108F29C05A7100D7443B /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			children = (
 				40E38CC629BF0CBD0015B019 /* ContentView.swift */,
 				4002F91929BF40930079207E /* AvatarsView.swift */,
+				40EA108F29C05A7100D7443B /* PhotoPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40EA109029C05A7100D7443B /* PhotoPicker.swift in Sources */,
 				4002F91A29BF40930079207E /* AvatarsView.swift in Sources */,
 				40E38CC729BF0CBD0015B019 /* ContentView.swift in Sources */,
 				40E38CC529BF0CBD0015B019 /* liveStreamAppApp.swift in Sources */,
