@@ -1,15 +1,19 @@
 //
-//  TextFieldsView.swift
+//  EntranceView.swift
 //  liveStreamApp
 //
-//  Created by Shumkar on 14/3/23.
+//  Created by Shumkar on 15/3/23.
 //
 
 import SwiftUI
 
-struct TextFieldsView: View {
+struct EntranceView: View {
+//    MARK: input text fields
     @Binding var username: String
     @Binding var roomname: String
+    let liveStreamObj = LiveStreamView()
+    
+// MARK: View Body
     var body: some View {
         VStack{
             Text("Display Name:")
@@ -61,23 +65,33 @@ struct TextFieldsView: View {
          
                 
             Button {
-                
+                liveStreamObj.connectToAgora()
             } label: {
-                HStack{
-                    Image(systemName: "plus.circle")
-                        .foregroundColor(Color.black)
-                    Text("Join")
-                        .font(.title2)
-                        .foregroundColor(Color.black)
+                if liveStreamObj.connectedToChannel {
+                    Text("Disconnect").padding(3.0).background(Color.red).cornerRadius(3.0).hidden()
+                }else{
+                    NavigationLink {
+                        LiveStreamView()
+                    } label: {
+                        HStack{
+                            Image(systemName: "plus.circle")
+                                .foregroundColor(Color.black)
+                            Text("Join")
+                                .font(.title2)
+                                .foregroundColor(Color.black)
+                        }
+                        .padding()
+                        .frame(width: UIScreen.main.bounds.width-100, height: 55, alignment: .center)
+                        .background(Color(.systemGray3))
+                        .cornerRadius(15)
+                        .shadow(color: .gray, radius: 5, x: 0, y: 10)
+                    }
                 }
-                .padding()
-                .frame(width: UIScreen.main.bounds.width-100, height: 55, alignment: .center)
-                .background(Color(.systemGray3))
-                .cornerRadius(15)
-                .shadow(color: .gray, radius: 5, x: 0, y: 10)
+                    
             }
             .padding(.top, 50)
         }
     }
+    
 }
 

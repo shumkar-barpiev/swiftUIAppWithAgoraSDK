@@ -10,7 +10,8 @@
 		409F12DD29BF536800CE7BA2 /* AgoraAppGroupDataHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 409F12DC29BF536800CE7BA2 /* AgoraAppGroupDataHelper */; };
 		409F12DF29BF536800CE7BA2 /* AgoraBroadcastExtensionHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 409F12DE29BF536800CE7BA2 /* AgoraBroadcastExtensionHelper */; };
 		409F12E129BF536800CE7BA2 /* AgoraUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 409F12E029BF536800CE7BA2 /* AgoraUIKit */; };
-		40E2342529C0CD7000FA32F7 /* TextFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2342429C0CD7000FA32F7 /* TextFieldsView.swift */; };
+		40A124CE29C16CF300F89CDF /* EntranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A124CD29C16CF300F89CDF /* EntranceView.swift */; };
+		40E2342529C0CD7000FA32F7 /* LiveStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2342429C0CD7000FA32F7 /* LiveStreamView.swift */; };
 		40E38CC529BF0CBD0015B019 /* liveStreamAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E38CC429BF0CBD0015B019 /* liveStreamAppApp.swift */; };
 		40E38CC729BF0CBD0015B019 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E38CC629BF0CBD0015B019 /* ContentView.swift */; };
 		40E38CC929BF0CBE0015B019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E38CC829BF0CBE0015B019 /* Assets.xcassets */; };
@@ -19,7 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		40E2342429C0CD7000FA32F7 /* TextFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsView.swift; sourceTree = "<group>"; };
+		40A124CD29C16CF300F89CDF /* EntranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceView.swift; sourceTree = "<group>"; };
+		40E2342429C0CD7000FA32F7 /* LiveStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamView.swift; sourceTree = "<group>"; };
 		40E38CC129BF0CBD0015B019 /* liveStreamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = liveStreamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E38CC429BF0CBD0015B019 /* liveStreamAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveStreamAppApp.swift; sourceTree = "<group>"; };
 		40E38CC629BF0CBD0015B019 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,7 +49,8 @@
 			children = (
 				40E38CC629BF0CBD0015B019 /* ContentView.swift */,
 				40EA108F29C05A7100D7443B /* PhotoPicker.swift */,
-				40E2342429C0CD7000FA32F7 /* TextFieldsView.swift */,
+				40E2342429C0CD7000FA32F7 /* LiveStreamView.swift */,
+				40A124CD29C16CF300F89CDF /* EntranceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,9 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A124CE29C16CF300F89CDF /* EntranceView.swift in Sources */,
 				40EA109029C05A7100D7443B /* PhotoPicker.swift in Sources */,
 				40E38CC729BF0CBD0015B019 /* ContentView.swift in Sources */,
-				40E2342529C0CD7000FA32F7 /* TextFieldsView.swift in Sources */,
+				40E2342529C0CD7000FA32F7 /* LiveStreamView.swift in Sources */,
 				40E38CC529BF0CBD0015B019 /* liveStreamAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,8 +312,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"liveStreamApp/Preview Content\"";
 				DEVELOPMENT_TEAM = PKM7964NGD;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Let me use your camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Let me use your microphone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,8 +344,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"liveStreamApp/Preview Content\"";
 				DEVELOPMENT_TEAM = PKM7964NGD;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Let me use your camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Let me use your microphone";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
