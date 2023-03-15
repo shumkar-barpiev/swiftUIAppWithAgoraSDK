@@ -37,7 +37,7 @@ struct PhotoPicker: UIViewControllerRepresentable{
             if let image = info[.editedImage]  as? UIImage{
                 photoPicker.avatarImage = Image(uiImage: image)
             } else{
-//                show something wrong
+                //                show something wrong
             }
             
             picker.dismiss(animated: true, completion: nil)

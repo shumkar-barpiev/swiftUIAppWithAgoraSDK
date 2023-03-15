@@ -10,10 +10,10 @@ import AgoraUIKit
 
 
 struct LiveStreamView: View {
-//    MARK: input text fields
+    //    MARK: input text fields
     
     @State var connectedToChannel = false
-//    MARK: Agora settings: App ID, Token
+    //    MARK: Agora settings: App ID, Token
     static var agview = AgoraViewer(
         connectionData: AgoraConnectionData(
             appId: "0ac666b981b048288839eb54cd4adc53",
@@ -25,7 +25,7 @@ struct LiveStreamView: View {
     @State private var agoraViewerStyle = 0
     
     
-// MARK: View Body
+    // MARK: View Body
     var body: some View {
         ZStack {
             LiveStreamView.agview
@@ -34,15 +34,15 @@ struct LiveStreamView: View {
                     Text("Floating").tag(0)
                     Text("Grid").tag(1)
                 }.pickerStyle(SegmentedPickerStyle())
-                .frame(
-                    minWidth: 0, idealWidth: 100, maxWidth: 200,
-                    minHeight: 0, idealHeight: 40, maxHeight: .infinity, alignment: .topTrailing
-                ).onChange(
-                    of: agoraViewerStyle,
-                    perform: {
-                        LiveStreamView.agview.viewer.style = $0 == 0 ? .floating : .grid
-                    }
-                )
+                    .frame(
+                        minWidth: 0, idealWidth: 100, maxWidth: 200,
+                        minHeight: 0, idealHeight: 40, maxHeight: .infinity, alignment: .topTrailing
+                    ).onChange(
+                        of: agoraViewerStyle,
+                        perform: {
+                            LiveStreamView.agview.viewer.style = $0 == 0 ? .floating : .grid
+                        }
+                    )
                 Spacer()
                 HStack {
                     Spacer()
@@ -52,7 +52,7 @@ struct LiveStreamView: View {
                             if connectedToChannel {
                                 Text("Disconnect").padding(3.0).background(Color.red).cornerRadius(3.0).hidden()
                             } else {
-                                Text("Connect").padding(3.0).background(Color.green).cornerRadius(3.0)
+                                Text("Connect to channel").padding(3.0).background(Color.green).cornerRadius(3.0)
                             }
                         }
                     )
@@ -61,7 +61,7 @@ struct LiveStreamView: View {
                 Spacer()
             }
         }
-           
+        
     }
     
     

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct EntranceView: View {
-//    MARK: input text fields
+    //    MARK: input text fields
     @Binding var username: String
     @Binding var roomname: String
     let liveStreamObj = LiveStreamView()
     
-// MARK: View Body
+    // MARK: View Body
     var body: some View {
         VStack{
             Text("Display Name:")
@@ -24,20 +24,20 @@ struct EntranceView: View {
                 .padding(5)
             
             HStack{
-                   Image(systemName: "person")
-                       .foregroundColor(Color.gray)
-                   TextField("Enter your Username", text: $username)
+                Image(systemName: "person")
+                    .foregroundColor(Color.gray)
+                TextField("Enter your Username", text: $username)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .frame(width: UIScreen.main.bounds.width-70, height: 27, alignment: .leading)
-               }
-               .padding()
-               .background(Color.white)
-               .cornerRadius(15)
-               .shadow(color: .gray, radius: 5, x: 0, y: 10)
-               .overlay(content: {
-                   RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 0.5)
-               })
+            }
+            .padding()
+            .background(Color.white)
+            .cornerRadius(15)
+            .shadow(color: .gray, radius: 5, x: 0, y: 10)
+            .overlay(content: {
+                RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 0.5)
+            })
             
             Text("Room Name:")
                 .foregroundColor(Color.white)
@@ -47,23 +47,23 @@ struct EntranceView: View {
                 .padding(5)
             
             HStack{
-                   Image(systemName: "square.and.pencil")
-                       .foregroundColor(Color.gray)
-                   TextField("Enter room name", text: $roomname)
+                Image(systemName: "square.and.pencil")
+                    .foregroundColor(Color.gray)
+                TextField("Enter room name", text: $roomname)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .frame(width: UIScreen.main.bounds.width-70, height: 27, alignment: .leading)
-               }
-               .padding()
-               .background(Color.white)
-               .cornerRadius(15)
-               .shadow(color: .gray, radius: 5, x: 0, y: 10)
-               .overlay(content: {
-                   RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 0.5)
-               })
+            }
+            .padding()
+            .background(Color.white)
+            .cornerRadius(15)
+            .shadow(color: .gray, radius: 5, x: 0, y: 10)
+            .overlay(content: {
+                RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 0.5)
+            })
             
-         
-                
+            
+            
             Button {
                 liveStreamObj.connectToAgora()
             } label: {
@@ -87,7 +87,7 @@ struct EntranceView: View {
                         .shadow(color: .gray, radius: 5, x: 0, y: 10)
                     }
                 }
-                    
+                
             }
             .padding(.top, 50)
         }
